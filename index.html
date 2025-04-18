@@ -9,6 +9,7 @@
     <title>NIKHIL Portfolio</title>
 </head>
 <body>
+<div id="particles-js" style="position: fixed; z-index: -1; width: 100%; height: 100%; background: black;"></div>
 <header class="">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
@@ -183,5 +184,66 @@ Let’s build something amazing together. 🚀
 </section>
 
 <script src="./scroll-animations.js"></script>
+<!-- Particles.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<!-- Init particles -->
+<script>
+  particlesJS('particles-js',
+    {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 3,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          }
+        },
+        "modes": {
+          "repulse": {
+            "distance": 100,
+            "duration": 0.4
+          }
+        }
+      },
+      "retina_detect": true
+    }
+  );
+</script>
 </body>
 </html>
