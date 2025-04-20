@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-PRODUCT-RECOMMENDATION-SYSTEM</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="aiproduct-style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Particle background -->
+  <div id="particles-js"></div>
+
+  <header class="">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+        <button class="uiverse">
+            <div class="wrapper">
+              <span>NIKHIL</span>
+              <div class="circle circle-12"></div>
+              <div class="circle circle-11"></div>
+              <div class="circle circle-10"></div>
+              <div class="circle circle-9"></div>
+              <div class="circle circle-8"></div>
+              <div class="circle circle-7"></div>
+              <div class="circle circle-6"></div>
+              <div class="circle circle-5"></div>
+              <div class="circle circle-4"></div>
+              <div class="circle circle-3"></div>
+              <div class="circle circle-2"></div>
+              <div class="circle circle-1"></div>
+            </div>
+          </button>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-white"></a>
+        <a class="mr-5 hover:text-white"></a>
+        <a class="mr-5 hover:text-white"></a>
+        <a class="mr-5 hover:text-white"></a>
+      </nav>
+      <!-- From Uiverse.io by adamgiebl -->
+       <a href="index.html"> 
+        <button>Home</button>
+       </a>
+    </div>
+  </header>
+
+  <!-- Main content section -->
+  <section class="text-gray-400 bg-transparent body-font relative z-10">
+    <div class="container px-5 py-24 mx-auto flex flex-col">
+      <div class="lg:w-4/6 mx-auto">
+        <div class="rounded-lg overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="./imges/background.png">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Particles.js Script -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 60
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.3
+        },
+        "size": {
+          "value": 3
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.2,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
