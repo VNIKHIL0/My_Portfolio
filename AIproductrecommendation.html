@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI-PRODUCT-RECOMMENDATION-SYSTEM</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="aiproduct-style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="aiproduct-style.css" />
   <style>
     body {
       margin: 0;
@@ -28,37 +28,32 @@
   <!-- Particle background -->
   <div id="particles-js"></div>
 
-  <header class="">
+  <!-- Header -->
+  <header>
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
         <button class="uiverse">
-            <div class="wrapper">
-              <span>NIKHIL</span>
-              <div class="circle circle-12"></div>
-              <div class="circle circle-11"></div>
-              <div class="circle circle-10"></div>
-              <div class="circle circle-9"></div>
-              <div class="circle circle-8"></div>
-              <div class="circle circle-7"></div>
-              <div class="circle circle-6"></div>
-              <div class="circle circle-5"></div>
-              <div class="circle circle-4"></div>
-              <div class="circle circle-3"></div>
-              <div class="circle circle-2"></div>
-              <div class="circle circle-1"></div>
-            </div>
-          </button>
+          <div class="wrapper">
+            <span>NIKHIL</span>
+            <div class="circle circle-12"></div>
+            <div class="circle circle-11"></div>
+            <div class="circle circle-10"></div>
+            <div class="circle circle-9"></div>
+            <div class="circle circle-8"></div>
+            <div class="circle circle-7"></div>
+            <div class="circle circle-6"></div>
+            <div class="circle circle-5"></div>
+            <div class="circle circle-4"></div>
+            <div class="circle circle-3"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-1"></div>
+          </div>
+        </button>
       </a>
-      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 hover:text-white"></a>
-        <a class="mr-5 hover:text-white"></a>
-        <a class="mr-5 hover:text-white"></a>
-        <a class="mr-5 hover:text-white"></a>
-      </nav>
-      <!-- From Uiverse.io by adamgiebl -->
-       <a href="index.html"> 
-        <button>Home</button>
-       </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"></nav>
+      <a href="index.html">
+        <button class="text-white border px-4 py-1 rounded hover:bg-white hover:text-black transition">Home</button>
+      </a>
     </div>
   </header>
 
@@ -66,33 +61,118 @@
   <section class="text-gray-400 bg-transparent body-font relative z-10">
     <div class="container px-5 py-24 mx-auto flex flex-col">
       <div class="lg:w-4/6 mx-auto">
-        <div class="rounded-lg overflow-hidden">
-          <img alt="content" class="object-cover object-center h-full w-full" src=".\images\background.png">
+        <div class="rounded-lg overflow-hidden mb-10">
+          <img alt="content" class="object-cover object-center h-full w-full" src="./imges/background.png">
         </div>
-      </div>
-    </div>
+
+        <!-- Project Details Start -->
+        <div class="bg-gray-900 bg-opacity-60 p-8 rounded-lg shadow-lg">
+          <h2 class="text-3xl font-bold text-white mb-4">🛒 Smart Shopping: Data and AI for Personalized E-Commerce</h2>
+          <p class="mb-4"><strong>🔍 Problem Statement:</strong> In the competitive landscape of e-commerce, offering personalized and relevant product recommendations is essential for enhancing customer experience, increasing conversion rates, and boosting overall sales. Manual segmentation and rule-based recommendations are inefficient and non-scalable.</p>
+
+          <p class="mb-4"><strong>🎯 Objective:</strong> To develop a multi-agent AI-powered recommendation system that analyzes customer data and product metadata using Ollama-based embeddings, and delivers real-time, personalized recommendations using SQLite for long-term memory.</p>
+
+          <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🧠 Multi-Agent Architecture</h3>
+          <ul class="list-disc list-inside ml-4 mb-4">
+            <li><strong>🤖 Customer Agent:</strong> Processes browsing history, demographics, and purchase history; stores embeddings in SQLite.</li>
+            <li><strong>🛍️ Product Agent:</strong> Converts product metadata into embeddings; stores in SQLite.</li>
+            <li><strong>🎯 Recommendation Engine:</strong> Matches embeddings using cosine similarity; returns top-5 personalized recommendations.</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🛠️ Technology Stack</h3>
+          <ul class="list-disc list-inside ml-4 mb-4">
+            <li><strong>Embeddings:</strong> Ollama (e.g., mistral)</li>
+            <li><strong>Vector Search:</strong> Scikit-learn Nearest Neighbors</li>
+            <li><strong>Database:</strong> SQLite</li>
+            <li><strong>Backend:</strong> Python, Pandas, TF-IDF</li>
+            <li><strong>Interface (optional):</strong> Flask / FastAPI</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🧪 Dataset Details</h3>
+          <p class="mb-2"><strong>📁 customer_data_collection.csv</strong></p>
+          <ul class="list-disc list-inside ml-4 mb-4">
+            <li>Customer_ID</li>
+            <li>Browsing_History</li>
+            <li>Demographics</li>
+            <li>Purchase History</li>
+          </ul>
+          <p class="mb-2"><strong>📁 product_recommendation_data.csv</strong></p>
+          <ul class="list-disc list-inside ml-4 mb-4">
+            <li>Product_ID</li>
+            <li>Category</li>
+            <li>Subcategory</li>
+            <li>Similar_Product_List</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🧬 Model Details</h3>
+          <ul class="list-disc list-inside ml-4 mb-4">
+            <li>TF-IDF for initial vectorization</li>
+            <li>Ollama embeddings for production</li>
+            <li>NearestNeighbors (Cosine Similarity)</li>
+            <li>Batch-wise Processing for efficiency</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold text-white mt-6 mb-2">💽 SQLite Tables</h3>
+          <ul class="list-disc list-inside ml-4 mb-4">
+            <li><strong>customers:</strong> Customer_ID, Browsing_History, Demographics</li>
+            <li><strong>products:</strong> Product_ID, Description, Category</li>
+            <li><strong>recommendations:</strong> Customer_ID, Recommended_Products</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🧠 Features</h3>
+          <ul class="list-disc list-inside ml-4 mb-4">
+            <li>Private Ollama embeddings</li>
+            <li>Modular agent architecture</li>
+            <li>Persistent memory via SQLite</li>
+            <li>Real-time recommendations</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🚀 Future Enhancements</h3>
+          <ul class="list-disc list-inside ml-4">
+            <li>Collaborative filtering integration</li>
+            <li>LLM-based chatbot for queries</li>
+            <li>Web scraping agent for trends</li>
+            <li>Frontend dashboard (React/HTML/Streamlit)</li>
+            <li>Recommendation API (Flask/FastAPI)</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold text-white mt-6 mb-2">Project Link : </h3>
+          <br>
+          <!-- From Uiverse.io by 0xnihilism --> 
+          <a href="https://frontend-for-product-recommendation.onrender.com/" target="_blank">
+            <button class="brutalist-button">
+              <div class="button-text">
+                <span>Click here for</span>
+                <span>Project</span>
+              </div>
+            </button>
+          </a>
+            <br>
+
+         <h3 class="text-2xl font-semibold text-white mt-6 mb-2">GitHub Link :</h3> 
+         <br>
+            <a href="https://github.com/VNIKHIL0/AI_product_recommendation_system" target="_blank">
+              <button class="brutalist-button">
+                <div class="button-text">
+                  <span>Visit</span>
+                  <span>GitHub Repo</span>
+                </div>
+              </button>
+            </a>         
+        </div>
+        <!-- Project Details End -->
   </section>
 
-  <!-- Particles.js Script -->
+  <!-- Particle.js -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
     particlesJS("particles-js", {
       "particles": {
-        "number": {
-          "value": 60
-        },
-        "color": {
-          "value": "#ffffff"
-        },
-        "shape": {
-          "type": "circle"
-        },
-        "opacity": {
-          "value": 0.3
-        },
-        "size": {
-          "value": 3
-        },
+        "number": { "value": 60 },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3 },
+        "size": { "value": 3 },
         "line_linked": {
           "enable": true,
           "distance": 150,
@@ -100,17 +180,11 @@
           "opacity": 0.2,
           "width": 1
         },
-        "move": {
-          "enable": true,
-          "speed": 2
-        }
+        "move": { "enable": true, "speed": 2 }
       },
       "interactivity": {
         "events": {
-          "onhover": {
-            "enable": true,
-            "mode": "repulse"
-          }
+          "onhover": { "enable": true, "mode": "repulse" }
         }
       },
       "retina_detect": true
