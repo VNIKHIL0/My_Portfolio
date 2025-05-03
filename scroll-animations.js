@@ -54,3 +54,18 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.style.display = 'none';
   }
 });
+
+//internship//
+function openExperience(card) {
+  const img = card.querySelector('.exp-cert-img').src;
+  const info = card.querySelector('.exp-info').innerHTML;
+
+  document.getElementById('expLightboxImg').src = img;
+  document.getElementById('expLightboxText').innerHTML = info;
+  document.getElementById('expLightbox').style.display = 'flex';
+}
+
+function closeExperience() {
+  document.getElementById('expLightbox').style.display = 'none';
+}
+
