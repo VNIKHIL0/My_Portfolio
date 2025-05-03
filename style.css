@@ -563,7 +563,8 @@ button {
   font-size: 1.3rem;
   color: white;
 }
-/**/
+
+/*certification*/
 .cert-section {
   padding: 60px 20px;
   text-align: center;
@@ -644,3 +645,100 @@ button {
 
 .prev { left: 30px; }
 .next { right: 30px; }
+
+/*internship*/
+.experience-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.experience-card {
+  background: #111827;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.exp-cert-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.exp-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.exp-info h3 {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: wheat;
+}
+
+.company {
+  font-weight: bold;
+  color: white;
+}
+
+.duration {
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: white;
+}
+
+/* Lightbox Modal */
+.exp-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.exp-lightbox-content {
+  max-width: 800px;
+  width: 100%;
+  background: #111827;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.exp-lightbox-content img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  display: block;
+}
+
+.exp-lightbox-info {
+  padding: 20px;
+  color: white;
+  text-align: left;
+}
