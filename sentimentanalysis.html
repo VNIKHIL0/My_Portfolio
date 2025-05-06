@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI-PRODUCT-RECOMMENDATION-SYSTEM</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="sentimantstyle.css"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Particle background -->
+  <div id="particles-js"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+        <button class="uiverse">
+          <div class="wrapper">
+            <span>NIKHIL</span>
+            <div class="circle circle-12"></div>
+            <div class="circle circle-11"></div>
+            <div class="circle circle-10"></div>
+            <div class="circle circle-9"></div>
+            <div class="circle circle-8"></div>
+            <div class="circle circle-7"></div>
+            <div class="circle circle-6"></div>
+            <div class="circle circle-5"></div>
+            <div class="circle circle-4"></div>
+            <div class="circle circle-3"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-1"></div>
+          </div>
+        </button>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"></nav>
+      <a href="index.html">
+        <button class="text-white border px-4 py-1 rounded hover:bg-white hover:text-black transition">Home</button>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main content section -->
+  <section class="text-gray-400 bg-transparent body-font relative z-10">
+    <div class="container px-5 py-24 mx-auto flex flex-col">
+      <div class="lg:w-4/6 mx-auto">
+        <div class="rounded-lg overflow-hidden mb-10">
+          <img alt="content" class="object-cover object-center h-full w-full" src=".\images\Whats-Sentiment-Analysis.png">
+        </div>
+
+      <!-- Project Details Start -->
+      <div class="bg-gray-900 bg-opacity-60 p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold text-white mb-4">🤖 Sentiment Analysis Using Webcam</h2>
+        <p class="mb-4"><strong>🔍 Problem Statement:</strong> Understanding and analyzing human emotions can help improve user interaction and provide personalized experiences in various applications. Real-time sentiment analysis using a webcam allows systems to gauge user emotions and respond accordingly. Traditional methods often require manual input, but this system automates emotion detection via facial expressions.</p>
+
+        <p class="mb-4"><strong>🎯 Objective:</strong> To develop a real-time sentiment analysis system that captures webcam images, processes them to detect emotions using DeepFace, and returns the dominant emotion to the user.</p>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🧠 Architecture Overview</h3>
+        <ul class="list-disc list-inside ml-4 mb-4">
+          <li><strong>🎥 Webcam Capture:</strong> Captures images in real-time using the browser’s webcam interface.</li>
+          <li><strong>🔌 Flask Backend:</strong> The Flask application handles the image processing and emotion detection logic.</li>
+          <li><strong>🤖 DeepFace:</strong> Deep learning model used for emotion recognition based on facial expressions detected in the images.</li>
+          <li><strong>📡 Image Processing:</strong> Base64-encoded image data is sent from the frontend to the backend for analysis.</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🛠️ Technology Stack</h3>
+        <ul class="list-disc list-inside ml-4 mb-4">
+          <li><strong>Backend Framework:</strong> Flask (Python)</li>
+          <li><strong>Computer Vision:</strong> OpenCV for image processing and webcam integration</li>
+          <li><strong>Emotion Recognition:</strong> DeepFace for facial emotion analysis</li>
+          <li><strong>Data Encoding:</strong> Base64 for sending images via HTTP requests</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🧑‍💻 Workflow</h3>
+        <p class="mb-2"><strong>1. Webcam Image Capture:</strong> The user’s webcam captures a frame and sends it to the server as a base64-encoded string.</p>
+        <p class="mb-2"><strong>2. Image Decoding:</strong> The Flask backend decodes the base64 image and processes it using OpenCV.</p>
+        <p class="mb-2"><strong>3. Emotion Analysis:</strong> DeepFace analyzes the processed image, detecting facial features and identifying the dominant emotion (e.g., happy, sad, angry, etc.).</p>
+        <p class="mb-2"><strong>4. Response:</strong> The Flask backend returns the detected emotion as a JSON response, which is displayed on the frontend.</p>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🧠 Model Details</h3>
+        <ul class="list-disc list-inside ml-4 mb-4">
+          <li><strong>Emotion Detection:</strong> DeepFace uses convolutional neural networks (CNNs) trained on large datasets of facial images to detect emotions from facial expressions.</li>
+          <li><strong>Actions:</strong> Only the ‘emotion’ action is enabled in DeepFace to focus solely on facial emotion detection.</li>
+          <li><strong>Error Handling:</strong> If no face is detected in the image, the system defaults to "No Face Detected" and avoids crashing.</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">💽 Data Flow</h3>
+        <ul class="list-disc list-inside ml-4 mb-4">
+          <li><strong>Frontend:</strong> Captures image from the webcam and sends it to the Flask backend as base64 data.</li>
+          <li><strong>Backend:</strong> Decodes the base64 image, processes it, and uses DeepFace to analyze the emotion.</li>
+          <li><strong>Output:</strong> Returns the detected emotion in JSON format (e.g., happy, sad, etc.).</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🔧 Features</h3>
+        <ul class="list-disc list-inside ml-4 mb-4">
+          <li>Real-time emotion detection from webcam images</li>
+          <li>Automatic face detection and emotion classification</li>
+          <li>Flask API to handle requests and responses</li>
+          <li>Error handling for no face detection</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🚀 Future Enhancements</h3>
+        <ul class="list-disc list-inside ml-4">
+          <li>Integration with voice-based emotion recognition</li>
+          <li>Incorporating more emotion categories (e.g., neutral, surprised, disgusted)</li>
+          <li>Use of more advanced facial recognition models for better accuracy</li>
+          <li>Webcam-based interaction system for virtual meetings and customer feedback</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">GitHub Link :</h3> 
+        <a href="https://github.com/VNIKHIL0/Sentiment_analysis" target="_blank">
+          <button class="brutalist-button">
+            <div class="button-text">
+              <span>Visit</span>
+              <span>GitHub Repo</span>
+            </div>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+ <!-- Particle.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60 },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.2,
+          "width": 1
+        },
+        "move": { "enable": true, "speed": 2 }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
