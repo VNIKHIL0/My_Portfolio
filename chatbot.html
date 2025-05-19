@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI-PRODUCT-RECOMMENDATION-SYSTEM</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="chatbotCSS.css"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Particle background -->
+  <div id="particles-js"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+        <button class="uiverse">
+          <div class="wrapper">
+            <span>NIKHIL</span>
+            <div class="circle circle-12"></div>
+            <div class="circle circle-11"></div>
+            <div class="circle circle-10"></div>
+            <div class="circle circle-9"></div>
+            <div class="circle circle-8"></div>
+            <div class="circle circle-7"></div>
+            <div class="circle circle-6"></div>
+            <div class="circle circle-5"></div>
+            <div class="circle circle-4"></div>
+            <div class="circle circle-3"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-1"></div>
+          </div>
+        </button>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"></nav>
+      <a href="index.html">
+        <button class="text-white border px-4 py-1 rounded hover:bg-white hover:text-black transition">Home</button>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main content section -->
+  <section class="text-gray-400 bg-transparent body-font relative z-10">
+    <div class="container px-5 py-24 mx-auto flex flex-col">
+      <div class="lg:w-4/6 mx-auto">
+        <div class="rounded-lg overflow-hidden mb-10">
+          <img alt="content" class="object-cover object-center h-full w-full" src=".\images\chatbot.jpg">
+        </div>
+
+      <!-- Project Details Start -->
+      <div class="bg-gray-900 bg-opacity-60 p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold text-white mb-4">💬 AI Chatbot Powered by Ollama (LLM)</h2>
+        <p class="mb-4"><strong>🔍 Problem Statement:</strong> In the era of instant communication, traditional chatbots with rule-based logic fail to provide personalized, context-aware responses. There is a growing demand for intelligent chat interfaces that can understand human intent and respond naturally.</p>
+
+        <p class="mb-4"><strong>🎯 Objective:</strong> To build a locally running AI chatbot that leverages Ollama’s lightweight large language models (LLMs) for fast, secure, and private conversational AI without reliance on cloud APIs.</p>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🧠 Architecture Overview</h3>
+        <ul class="list-disc list-inside ml-4 mb-4">
+          <li><strong>💻 Frontend:</strong> Provides a chat UI for the user to send messages and receive responses in real time.</li>
+          <li><strong>⚙️ Backend:</strong> Flask or FastAPI handles user inputs and passes them to the Ollama model for generation.</li>
+          <li><strong>🧠 Ollama Engine:</strong> Processes prompts using an LLM (e.g., Mistral, LLaMA 2) and generates responses contextually.</li>
+          <li><strong>🔁 Conversation History:</strong> Maintains chat context for multi-turn interactions.</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🛠️ Technology Stack</h3>
+        <ul class="list-disc list-inside ml-4 mb-4">
+          <li><strong>LLM Engine:</strong> Ollama (Mistral, LLaMA 2, etc.)</li>
+          <li><strong>Backend:</strong> Python with Flask / FastAPI</li>
+          <li><strong>Frontend:</strong> HTML, CSS, JavaScript (with Fetch API or Axios)</li>
+          <li><strong>Communication:</strong> JSON-based HTTP API calls</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🧑‍💻 Workflow</h3>
+        <p class="mb-2"><strong>1. User Input:</strong> User types a message in the frontend chat interface.</p>
+        <p class="mb-2"><strong>2. API Request:</strong> Message is sent via POST request to the Flask/FastAPI backend.</p>
+        <p class="mb-2"><strong>3. Prompt Processing:</strong> Backend formats the input and sends it to the Ollama model running locally.</p>
+        <p class="mb-2"><strong>4. LLM Generation:</strong> Ollama returns the model-generated response based on the prompt.</p>
+        <p class="mb-2"><strong>5. Display Response:</strong> The backend sends the response back to the frontend for display.</p>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🧠 Model Details</h3>
+        <ul class="list-disc list-inside ml-4 mb-4">
+          <li><strong>Base Model:</strong> Mistral / LLaMA 2 from Ollama</li>
+          <li><strong>Capabilities:</strong> Contextual Q&A, summarization, code explanation, conversation memory</li>
+          <li><strong>Token Limit:</strong> Typically supports 4k–8k tokens per context</li>
+          <li><strong>Local Execution:</strong> Models run directly on the user’s device, ensuring privacy</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">📡 API Communication</h3>
+        <ul class="list-disc list-inside ml-4 mb-4">
+          <li><strong>POST /chat:</strong> Receives message and context, sends to Ollama</li>
+          <li><strong>Response:</strong> Returns model-generated reply as JSON</li>
+          <li><strong>Error Handling:</strong> Gracefully handles failures like empty input or model not available</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🔧 Features</h3>
+        <ul class="list-disc list-inside ml-4 mb-4">
+          <li>Runs offline on your local machine using Ollama</li>
+          <li>Supports contextual multi-turn conversations</li>
+          <li>Lightweight and fast compared to cloud LLMs</li>
+          <li>Frontend and backend separation for flexibility</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">🚀 Future Enhancements</h3>
+        <ul class="list-disc list-inside ml-4">
+          <li>Avatar and typing animation in chat UI</li>
+          <li>Voice-to-text integration for speech input</li>
+          <li>Persistent chat history using SQLite or local storage</li>
+          <li>Model selection dropdown (Mistral, LLaMA2, etc.)</li>
+          <li>Dark/light mode switch and modern design improvements</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-white mt-6 mb-2">GitHub Link :</h3> 
+        <a href="https://github.com/VNIKHIL0/AI-ChatBot" target="_blank">
+          <button class="brutalist-button">
+            <div class="button-text">
+              <span>Visit</span>
+              <span>GitHub Repo</span>
+            </div>
+          </button>
+        </a>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <!-- Particle.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60 },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.2,
+          "width": 1
+        },
+        "move": { "enable": true, "speed": 2 }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
