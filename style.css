@@ -742,3 +742,14 @@ button {
   color: white;
   text-align: left;
 }
+
+/*hrader*/
+header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-radius: 12px;
+  margin: 10px;
+}
